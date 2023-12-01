@@ -1,0 +1,46 @@
+.header {
+  background-color: rgba(96, 202, 202, 0.548);
+
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  height: 80px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 25px;
+  color: aliceblue;
+}
+
+.nav-link { 
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+  transition: .2s;
+
+  &:hover {
+    color: rgb(118, 194, 194);
+  }
+}
+
+.cart-icon {
+  height: 32px;
+  width: 32px;
+  border-radius: 10px;
+  border-color: aliceblue;
+}
+
+.nav-logo {
+  height: 30px;
+  width: 300px;
+  object-fit: cover;
+  mix-blend-mode: color-burn;
+  margin-top: 0;
+  
+}
