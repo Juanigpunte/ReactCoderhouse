@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-around;
   gap: 30px;
-  height: 80px;
+  height: 85px;
 }
 
 .logo {
@@ -21,7 +21,7 @@
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: none;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 23px;
   transition: .2s;
 
   &:hover {
@@ -30,17 +30,30 @@
 }
 
 .cart-icon {
-  height: 32px;
-  width: 32px;
+  transition: .15s;
+  font-size: 18px;
+  height: 36px;
+  width: 36px;
   border-radius: 10px;
   border-color: aliceblue;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
 }
 
 .nav-logo {
-  height: 30px;
+  transition: .15s;
+  height: 100px;
   width: 300px;
   object-fit: cover;
-  mix-blend-mode: color-burn;
+  mix-blend-mode:multiply;
   margin-top: 0;
+
+  &:hover {
+    transform: scale(1.05) rotate(3deg);
+    
+  }
   
 }
