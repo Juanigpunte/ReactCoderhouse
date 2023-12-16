@@ -1,5 +1,6 @@
 import CartIcon from "./CartIcon"
 import logo from '../assets/logonny.png'
+import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => { 
 
@@ -8,9 +9,9 @@ const Navbar = () => {
                 <div className="nav-container">
                     <img className="nav-logo" src={logo} alt="logo" />
                     <nav className="nav-container">
-                        <a className="nav-link" href="">Inicio</a>
-                        <a className="nav-link" href="">Nosotros</a>
-                        <a className="nav-link" href="">Tienda</a>
+                        <NavLink className="nav-link" to={"/"}>Inicio</NavLink>
+                        <NavLink className="nav-link" to={"/nosotros"}>Nosotros</NavLink>
+                        <NavLink className="nav-link" to={"/store"}>Tienda</NavLink>
                     </nav>
                     <CartIcon />    
                 </div>

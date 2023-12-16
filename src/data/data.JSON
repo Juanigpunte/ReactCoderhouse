@@ -1,0 +1,21 @@
+{
+    "skin":[
+        {
+            "id": 0,
+            "nombre": "AK-47",
+            "price": "11.53",
+            "categoria": "rifles",
+            "thumbnail": "",
+            "float": "19.346"
+
+        },
+        {
+            "id": 1,
+            "nombre": "AK-47",
+            "price": "32.75",
+            "categoria": "rifles",
+            "thumbnail": "",
+            "float": "23.120"
+        }
+    ]
+}
