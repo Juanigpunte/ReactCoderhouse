@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -9,6 +10,7 @@ const ItemDetail = ({ item }) => {
         <img className="image-detail" src={item.thumbnail} alt={item.name} />
     </div>
     <div className="product-info">
+        <button className="button-detail"><Link className="link-detail" to={'/store'}>Volver</Link></button>
          <div className="product-text">
             <h1>{item.name} ▪︎ {item.skin}</h1>
             <h2>{item.wear} - {item.float}</h2>
