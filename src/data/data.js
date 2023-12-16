@@ -50,7 +50,7 @@ export const MOCK_DATA = [
         float: 0.237
     },
     {
-        id: 19,
+        id: 4,
         name: 'M4A1-S',
         skin:'Blue Phospor',
         price: 812.32,
@@ -63,7 +63,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 20,
+        id: 5,
         name: 'M4A1-S',
         skin:'Chanticos Fire',
         price: 19.46,
@@ -76,7 +76,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 21,
+        id: 6,
         name: 'M4A1-S',
         skin:'Hiper Beast',
         price: 60.19,
@@ -89,7 +89,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 23,
+        id: 7,
         name: 'AWP',
         skin:'Chromatic Aberration',
         price: 28.30,
@@ -102,7 +102,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 22,
+        id: 8,
         name: 'M4A4',
         skin:'Living Colors',
         price: 5.76,
@@ -115,7 +115,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 24,
+        id: 9,
         name: 'M4A4',
         skin:'The Emperor',
         price: 15.19,
@@ -128,7 +128,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 4,
+        id: 10,
         name: 'AWP',
         skin:'Asiimov',
         price: 102.75,
@@ -141,7 +141,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 5,
+        id: 11,
         name: 'AWP',
         skin:'Asiimov',
         price: 152.75,
@@ -154,7 +154,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 6,
+        id: 12,
         name: 'AWP',
         skin:'Dragon Lore',
         price: 5510,
@@ -167,7 +167,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 7,
+        id: 13,
         name: 'AWP',
         skin:'Dragon Lore',
         price: 10360,
@@ -180,7 +180,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 8,
+        id: 14,
         name: 'USP',
         skin:'Cyrex',
         price: 1.75,
@@ -193,7 +193,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 9,
+        id: 15,
         name: 'USP',
         skin:'Cyrex',
         price: 1.75,
@@ -206,7 +206,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 10,
+        id: 16,
         name: 'USP',
         skin:'Cyrex',
         price: 4.75,
@@ -219,7 +219,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 12,
+        id: 17,
         name: 'Glock',
         skin:'Candy Apple',
         price: 0.43,
@@ -232,7 +232,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 13,
+        id: 18,
         name: 'Clock',
         skin:'Gamma Dopler',
         price: 36.25,
@@ -245,7 +245,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 14,
+        id: 19,
         name: 'Glock',
         skin:'Nuclear Garden',
         price: 12.61,
@@ -258,7 +258,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 15,
+        id: 20,
         name: 'Desert Eagle',
         skin:'PrintSteam',
         price: 41.55,
@@ -271,7 +271,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 16,
+        id: 21,
         name: 'Desert Eagle',
         skin:'PrintSteam',
         price: 28.55,
@@ -284,7 +284,7 @@ export const MOCK_DATA = [
 
     },
     {
-        id: 17,
+        id: 22,
         name: 'Desert Eagle',
         skin:'PrintSteam',
         price: 22.55,
