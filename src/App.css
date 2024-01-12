@@ -10,7 +10,7 @@
   justify-content: space-around;
   gap: 30px;
   height: 85px;
-  
+
 }
 
 .logo {
@@ -19,8 +19,8 @@
   color: aliceblue;
 }
 
-.nav-link { 
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.nav-link {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: none;
   color: rgb(250, 250, 250);
   font-size: 23px;
@@ -29,7 +29,14 @@
   &:hover {
     color: rgb(118, 194, 194);
   }
+
 }
+
+nav a.active {
+  color: rgb(118, 194, 194);
+  text-decoration: underline;
+}
+
 
 .cart-icon {
   transition: .15s;
@@ -50,14 +57,14 @@
   height: 100px;
   width: 300px;
   object-fit: cover;
-  mix-blend-mode:multiply;
+  mix-blend-mode: multiply;
   margin-top: 0;
 
   &:hover {
     transform: scale(1.05) rotate(3deg);
-    
+
   }
-  
+
 }
 
 .item-container {
@@ -94,11 +101,11 @@
   padding-left: 1.25em;
   position: absolute;
   left: 0;
-  background: rgb(96, 202, 202) ;
+  background: rgb(96, 202, 202);
   color: #fff;
   height: 2.5em;
   width: 218px;
-  font-weight:200;
+  font-weight: 200;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   opacity: 0;
@@ -141,7 +148,7 @@
   object-fit: contain;
   height: 250px;
   width: 100%;
-  background: rgba(96, 202, 202, 0.199) ;
+  background: rgba(96, 202, 202, 0.199);
   display: grid;
   place-items: center;
 }
@@ -151,9 +158,9 @@
   max-width: 100%;
   display: grid;
   grid-template-areas:
-  'a1  a2'
-  'a1  a2'
-  'a1  a2'
+    'a1  a2'
+    'a1  a2'
+    'a1  a2'
 
   ;
 
@@ -183,8 +190,8 @@
 }
 
 .inputs li {
-margin-top: 14px;
-width: 100px;
+  margin-top: 14px;
+  width: 100px;
 }
 
 .category-title {
@@ -203,10 +210,11 @@ width: 100px;
   font-size: 20px;
   transition: .15s;
 
-  &:hover{
+  &:hover {
     font-size: 25px;
     color: rgb(118, 194, 194);
   }
+
 }
 
 .wrapper {
@@ -223,7 +231,7 @@ width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:rgb(118, 194, 194);
+  background-color: rgb(118, 194, 194);
   float: left;
   height: 100%;
   width: 50%;
@@ -257,7 +265,8 @@ width: 100px;
   color: #474747;
 }
 
-.product-text h1, .product-price-btn p {
+.product-text h1,
+.product-price-btn p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
 }
@@ -345,7 +354,7 @@ width: 100px;
   border-radius: 10px;
   border-color: aliceblue;
   text-decoration: none;
-  
+
   &:hover {
     transform: scale(1.05);
   }
@@ -355,6 +364,205 @@ width: 100px;
 .link-detail {
   text-decoration: none;
   color: black
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.spinner-container {
+  margin-top: 210px;
+  --uib-size: 120px;
+  --uib-color: rgba(96, 202, 202, 0.548);
+  --uib-speed: 1.5s;
+  --dot-size: calc(var(--uib-size) * 0.17);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  animation: smoothRotate calc(var(--uib-speed) * 1.8) linear infinite;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation: rotate var(--uib-speed) ease-in-out infinite;
+}
+
+.dot::before {
+  content: '';
+  height: var(--dot-size);
+  width: var(--dot-size);
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  transition: background-color 0.3s ease;
+}
+
+.dot:nth-child(2),
+.dot:nth-child(2)::before {
+  animation-delay: calc(var(--uib-speed) * -0.835 * 0.5);
+}
+
+.dot:nth-child(3),
+.dot:nth-child(3)::before {
+  animation-delay: calc(var(--uib-speed) * -0.668 * 0.5);
+}
+
+.dot:nth-child(4),
+.dot:nth-child(4)::before {
+  animation-delay: calc(var(--uib-speed) * -0.501 * 0.5);
+}
+
+.dot:nth-child(5),
+.dot:nth-child(5)::before {
+  animation-delay: calc(var(--uib-speed) * -0.334 * 0.5);
+}
+
+.dot:nth-child(6),
+.dot:nth-child(6)::before {
+  animation-delay: calc(var(--uib-speed) * -0.167 * 0.5);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  65%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smoothRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
+.contador {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #ffffffc2;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  padding: 5px;
+  margin-left: 10px;
+  color: rgb(26, 163, 163);
+  font-size: 17px;
+}
+
+
+.cart-view {
+  margin: auto;
+  width: 100%;
+  margin-top: 50px;
+
+}
+
+.cart-item {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cart-item h3,
+p {
+  width: 100px;
+}
+
+.cart-img {
+
+  width: 150px;
+  object-fit: cover;
+}
+
+.cart-title-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cart-title-container h2 {
+  display: flex;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 100;
+  justify-content: center;
+
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  gap: 4px;
+  width: 100px;
+
+}
+
+.remove {
+  gap: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border: 0;
+  background-color: #00000000;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.trashIcon {
+  width: 25px;
+  height: 20px;
+}
+
+.separador {
+  display: flex;
+  justify-content: center;
+  height: 1px;
+  border-radius: 5px;
+  background-color: #00000036;
+}
+
+.total-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: sans-serif;
 }

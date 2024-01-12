@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react"
-import { pedirDatos } from "../utils/utils.js";
+import { pedirDatos } from "../../utils/utils.js";
 import ItemList from "./ItemList.jsx";
 import { useParams } from "react-router-dom";
-import FilterContainer from "./FilterContainer.jsx";
+import FilterContainer from "../Filter/FilterContainer.jsx";
+import { Spinner } from "../Loader/Spinner.jsx";
 
 const ItemListContainer = () => {
 
     const { itemCategory } = useParams()
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true)
         pedirDatos()
             .then((data) => {
                 const items = itemCategory
@@ -17,15 +20,27 @@ const ItemListContainer = () => {
                     : data
                 setProducts(items)
             })
+            .finally(() => setLoading( false))
 
     }, [itemCategory])
 
 
     return (
-        <div className="grid">
-        <FilterContainer />
-        <ItemList products={products}/>
-        </div>
+        <>
+
+        {loading ? (
+            <div className="grid">
+            <FilterContainer />
+            <Spinner />
+            </div>
+            ) : (
+            
+            <div className="grid">
+            <FilterContainer />
+            <ItemList products={products}/>
+            </div>)}
+
+        </>  
     )
 }
 
