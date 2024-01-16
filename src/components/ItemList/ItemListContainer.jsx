@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
-import { pedirDatos } from "../../utils/utils.js";
-import ItemList from "./ItemList.jsx";
 import { useParams } from "react-router-dom";
-import FilterContainer from "../Filter/FilterContainer.jsx";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config.js";
 import { Spinner } from "../Loader/Spinner.jsx";
+import ItemList from "./ItemList.jsx";
+import FilterContainer from "../Filter/FilterContainer.jsx";
 
 const ItemListContainer = () => {
 
@@ -13,34 +14,45 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        pedirDatos()
-            .then((data) => {
-                const items = itemCategory
-                    ? data.filter(prod => prod.categoria === itemCategory)
-                    : data
-                setProducts(items)
+
+        const productos = collection(db, 'items') //armo la referencia a la coleccion de la base de datos
+        const q = itemCategory 
+                    ? query(productos, where('categoria', '==', itemCategory) )
+                    : productos
+        
+        getDocs( q )
+            .then((querySnapshot) => {
+
+                 const docs = querySnapshot.docs.map(doc => {
+                    return {
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                 })
+                 
+                 setProducts( docs )
             })
-            .finally(() => setLoading( false))
+            .finally(() => setLoading(false))
 
     }, [itemCategory])
 
 
     return (
-        <>
+        <> 
 
-        {loading ? (
-            <div className="grid">
-            <FilterContainer />
-            <Spinner />
-            </div>
+            {loading ? (
+                <div className="grid">
+                    <FilterContainer />
+                    <Spinner />
+                </div>
             ) : (
-            
-            <div className="grid">
-            <FilterContainer />
-            <ItemList products={products}/>
-            </div>)}
 
-        </>  
+                <div className="grid">
+                    <FilterContainer />
+                    <ItemList products={products} />
+                </div>)}
+
+        </>
     )
 }
 
