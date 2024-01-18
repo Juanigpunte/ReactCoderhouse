@@ -254,16 +254,17 @@ nav a.active {
 }
 
 .product-info {
-  float: left;
+  display: flex;
+  flex-direction: column;
   height: 420px;
-  width: 327px;
+  width: 50%;
   border-radius: 0 7px 10px 7px;
   background-color: #ffffff;
 }
 
 .product-text {
   height: 300px;
-  width: 100%;
+  width: 50%;
 }
 
 .product-text h1 {
@@ -350,21 +351,24 @@ nav a.active {
   background-color: rgb(118, 194, 194);
 }
 
-.button-detail {
-  position: absolute;
-  z-index: 2;
-  right: 300px;
-  top: 220px;
-  transition: .15s;
-  font-size: 18px;
-  height: 36px;
-  width: 60px;
-  border-radius: 10px;
-  border-color: aliceblue;
-  text-decoration: none;
+.flex-end {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
+.button-detail {
+  padding: 10px;
+  transition: .15s;
+  font-size: 23px;
+  border: none;
+  height: 39px;
+  width: 60px;
+  text-decoration: none;
+  background-color: transparent;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
   }
 
 }
@@ -575,13 +579,20 @@ p {
   font-family: sans-serif;
 }
 
-.column-container{
+.column-container {
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+ 
+.column-container h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+}
+
 
 .checkout-form {
   margin-top: 30px;

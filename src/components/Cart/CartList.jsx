@@ -17,7 +17,7 @@ const CartList = () => {
                     ? (
                         <>  <div className="column-container">
                             <h3>Carrito vacio</h3>
-                            <Link to={"/store"}><button className="form-button">Volver a la tienda</button></Link>
+                            <Link to={"/store"}><button className="form-button">Ir a la tienda</button></Link>
                         </div>
                         </>
                     ) 

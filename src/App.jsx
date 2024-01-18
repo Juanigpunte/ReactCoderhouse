@@ -8,10 +8,16 @@ import CartProvider from './context/CartContext.jsx';
 import CartList from './components/Cart/CartList.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
 
+//Aos animation library
+import AOS from "aos";
+import 'aos/dist/aos.css'
+
+
+AOS.init();
+
 
 function App() {
 
-  
 
   return (
     <CartProvider>
