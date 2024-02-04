@@ -650,3 +650,11 @@ p {
   justify-content: center;
   gap: 20px;
 }
+
+
+
+.order-text {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
