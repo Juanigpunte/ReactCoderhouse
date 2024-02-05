@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Boton from "../Buttons/AddToCart";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 
 
@@ -8,16 +8,26 @@ import { CartContext } from "../../context/CartContext";
 
 
 const ItemDetail = ({ item }) => {
+    const [cantidad, setCantidad] = useState(0);
     const { addToCart, isInCart } = useContext(CartContext);
 
     const handleAdd = () => {
         const itemToCart = {
             ...item,
+            cantidad: cantidad
         }
 
         addToCart(itemToCart)
 
     };
+
+    const handleSumarUno = () => {
+        setCantidad(cantidad + 1)
+    }
+
+    const handleRestarUno = () => {
+        cantidad > 1 && setCantidad(cantidad - 1)
+    }
 
 
     return (
@@ -38,7 +48,14 @@ const ItemDetail = ({ item }) => {
                     {
                         isInCart(item.id)
                             ? <Link to="/cart"><Boton>Terminar mi compra</Boton></Link>
-                            : <Boton onClick={handleAdd}>Sumar al carrito</Boton>
+                            : <>
+                               <Boton onClick={handleAdd}>Sumar al carrito</Boton>
+                               <div className="quantity">
+                                    <Boton onClick={handleRestarUno}>➖</Boton> 
+                                    <span>{cantidad}</span>
+                                    <Boton onClick={handleSumarUno}>➕</Boton>
+                               </div>
+                             </>
                     }
 
                     <p>$<span>{item.price}</span></p>

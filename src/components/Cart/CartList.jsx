@@ -4,6 +4,7 @@ import Boton from "../Buttons/AddToCart";
 import trashIcon from "../../assets/trash.svg";
 import { Link } from "react-router-dom";
 
+
 const CartList = () => {
     const { cart, totalPrice, deleteItemCart } = useContext(CartContext)
 
@@ -35,15 +36,18 @@ const CartList = () => {
                                                 <li key={item.id} className="cart-item">
                                                     <div className="flex-center"><img className="cart-img" src={item.thumbnail} alt={item.name} /></div>
                                                     <div className="flex-center"><h3>{item.name}</h3><h4>{item.skin}</h4><h5>{item.wear} | {item.float} </h5></div>
-                                                    <div className="flex-center"><p>${item.price}</p></div>
-                                                    <div className="flex-center"><Boton onClick={() => deleteItemCart(item.id)} className="remove"><img className="trashIcon" src={trashIcon} alt="delete-button" />remove</Boton></div>
-                                                </li>
-                                                <span className="separador"></span>
+                                                    <div className="flex-center"><p>Cantidad: {item.cantidad}</p><p>${item.price}</p></div>
+                                                    <div className="flex-center">
+                                                        
+                                                        <Boton onClick={() => deleteItemCart(item.id)} className="remove"><img className="trashIcon" src={trashIcon} alt="delete-button" />remove</Boton>
+                                                        
+                                                    </div>
+                                                </li>                                                <span className="separador"></span>
                                             </>
                                         ))
                                     }
                                 </ul>
-                                <p className="total-cart">Total:${totalPrice()} </p>
+                                <p className="total-cart">Total: ${totalPrice()} </p>
                             </div>
 
 

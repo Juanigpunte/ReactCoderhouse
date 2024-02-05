@@ -331,8 +331,8 @@ nav a.active {
   float: right;
   display: inline-block;
   height: 50px;
-  width: 176px;
-  margin: 0 20px 0 16px;
+  max-width: 176px;
+  margin: 0 10px 0 6px;
   box-sizing: border-box;
   border: transparent;
   border-radius: 60px;
@@ -349,6 +349,22 @@ nav a.active {
 
 .product-price-btn button:hover {
   background-color: rgb(118, 194, 194);
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+    span {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 25px;
+      font-weight: lighter;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
 }
 
 .flex-end {
